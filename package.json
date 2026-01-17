@@ -41,7 +41,7 @@
   "author": "bruzethegreat",
   "license": "MIT",
   "dependencies": {
-    "@modelcontextprotocol/sdk": "^0.4.0"
+    "@modelcontextprotocol/sdk": "^0.7.0"
   },
   "devDependencies": {
     "@types/node": "^20.0.0",

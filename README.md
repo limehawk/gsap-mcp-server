@@ -4,13 +4,18 @@
 
 > 🎉 **ALL GSAP PLUGINS NOW 100% FREE** thanks to Webflow! Including SplitText, MorphSVG, DrawSVG, and more!
 
+> 🔀 **Fork of [bruzethegreat/gsap-master-mcp-server](https://github.com/bruzethegreat/gsap-master-mcp-server)**
+
 ## ⚡ **Quick Start**
 
 ```bash
-claude mcp add-json gsap-master '{"command":"npx","args":["bruzethegreat-gsap-master-mcp-server@latest"]}'
+claude mcp add-json gsap-master '{"command":"bun x","args":["tsx","/path/to/gsap-mcp-server/index.ts"]}'
 ```
 
-That's it! You now have the ultimate GSAP assistant in Claude.
+Or if published to npm:
+```bash
+claude mcp add-json gsap-master '{"command":"bun x","args":["@limehawk/gsap-mcp-server@latest"]}'
+```
 
 ## 🚀 **What You Get - 6 Powerful Tools**
 
@@ -133,30 +138,29 @@ Use the generate_complete_setup tool for React with ScrollTrigger and SplitText 
 
 ## 📦 **Requirements**
 
-- Claude Desktop with MCP support
-- Node.js 18+ (automatically handled by npx)
-- No additional setup required!
+- Claude Desktop or Claude Code with MCP support
+- Node.js 18+
+- TypeScript (tsx) for local execution
 
 ## 🎯 **Installation Methods**
 
-### **Option 1: One-Line Install (Recommended)**
+### **Option 1: Local Execution (Development)**
 ```bash
-claude mcp add-json gsap-master '{"command":"npx","args":["bruzethegreat-gsap-master-mcp-server@latest"]}'
+# Clone the repo
+git clone https://github.com/limehawk/gsap-mcp-server.git
+
+# Add to Claude
+claude mcp add-json gsap-master '{"command":"bun x","args":["tsx","/path/to/gsap-mcp-server/index.ts"]}'
 ```
 
-### **Option 2: Specific Version**
-```bash
-claude mcp add-json gsap-master '{"command":"npx","args":["bruzethegreat-gsap-master-mcp-server@2.1.0"]}'
-```
-
-### **Option 3: Manual Configuration**
-Add to your `claude_desktop_config.json`:
+### **Option 2: Manual Configuration**
+Add to your Claude MCP config:
 ```json
 {
   "mcpServers": {
     "gsap-master": {
-      "command": "npx",
-      "args": ["bruzethegreat-gsap-master-mcp-server@latest"]
+      "command": "bun x",
+      "args": ["tsx", "/path/to/gsap-mcp-server/index.ts"]
     }
   }
 }
@@ -183,8 +187,8 @@ Create a typewriter effect that reveals text character by character with a blink
 
 ## 🤝 **Contributing**
 
-Found a bug? Have a feature request? 
-- 🐛 **Issues**: [GitHub Issues](https://github.com/bruzethegreat/gsap-master-mcp-server/issues)
+Found a bug? Have a feature request?
+- 🐛 **Issues**: [GitHub Issues](https://github.com/limehawk/gsap-mcp-server/issues)
 - 💡 **Features**: Share your ideas and use cases
 - 🔧 **Pull Requests**: Contributions welcome!
 
@@ -196,9 +200,10 @@ Found a bug? Have a feature request?
 - **All Frameworks** supported
 - **100% Free** - including all premium plugins!
 
-## 🏆 **Created By**
+## 🏆 **Credits**
 
-**@bruzethegreat** - Passionate about creating tools that empower developers to build amazing animations with ease.
+- **Original Author**: [@bruzethegreat](https://github.com/bruzethegreat/gsap-master-mcp-server)
+- **This Fork**: [@limehawk](https://github.com/limehawk/gsap-mcp-server)
 
 ## 📜 **License**
 
@@ -207,7 +212,3 @@ MIT License - Use it anywhere, anytime, for any project!
 ---
 
 **Transform Claude into your personal GSAP animation expert today!** 🎯⚡
-
-[![npm version](https://badge.fury.io/js/bruzethegreat-gsap-master-mcp-server.svg)](https://www.npmjs.com/package/bruzethegreat-gsap-master-mcp-server)
-[![Downloads](https://img.shields.io/npm/dm/bruzethegreat-gsap-master-mcp-server.svg)](https://www.npmjs.com/package/bruzethegreat-gsap-master-mcp-server)
-```
